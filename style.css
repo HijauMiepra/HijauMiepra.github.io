@@ -1,0 +1,172 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+  }
+  
+  /* Header */
+  header {
+    background-color: #2c7d28;
+    padding: 20px;
+  }
+  
+  header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header img {
+    width: 150px;
+  }
+  
+  header ul {
+    list-style-type: none;
+    display: flex;
+  }
+  
+  header ul li {
+    margin-left: 20px;
+  }
+  
+  header ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  header ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Hero Section */
+
+    .hero-section {
+    background: url('your-background-image.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #2c7d28; /* Warna hijau untuk teks */
+  }
+  
+  .hero-section h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #2c7d28; /* Warna hijau untuk judul besar */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Tambah bayangan teks */
+  }
+  
+  .hero-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #2c7d28; /* Warna hijau untuk deskripsi */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Tambah bayangan teks */
+  }
+  
+  .btn-download {
+    background-color: #f8b400;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .btn-download:hover {
+    background-color: #ffcc33;
+  }
+  
+  /* Features Section */
+  .features-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff;
+  }
+  
+  .features-section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #2c7d28;
+  }
+  
+  .feature-box {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .feature-item {
+    width: 250px;
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .feature-item img {
+    width: 80px;
+    margin-bottom: 20px;
+  }
+  
+  .feature-item h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .feature-item p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #2c7d28;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer p {
+    margin-bottom: 10px;
+  }
+  
+  .social-media a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .social-media a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    header ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .feature-box {
+      flex-direction: column;
+    }
+  
+    .hero-section h1 {
+      font-size: 32px;
+    }
+  
+    .hero-section p {
+      font-size: 16px;
+    }
+  }
+  
