@@ -170,22 +170,25 @@ footer p {
   }
 
   .nav-links {
-    display: none; /* Sembunyikan link navigasi secara default */
     flex-direction: column; /* Menampilkan secara vertikal */
     width: 100%; /* Memperlebar */
     background-color: #2c7d28; /* Warna latar belakang menu */
     position: absolute; /* Menggunakan posisi absolut */
     top: 60px; /* Posisi di bawah header */
     left: 0; /* Memperlebar dari kiri */
-    transition: max-height 0.5s ease; /* Transisi untuk max-height */
+    transition: max-height 0.5s ease, opacity 0.5s ease; /* Transisi untuk max-height dan opacity */
     max-height: 0; /* Sembunyikan dengan max-height */
+    opacity: 0; /* Sembunyikan dengan opacity */
+    visibility: hidden; /* Hilangkan secara visual */
     overflow: hidden; /* Sembunyikan overflow */
   }
-
+  
   .nav-links.show {
-    display: flex; /* Tampilkan link navigasi saat aktif */
     max-height: 300px; /* Tentukan max-height saat tampil */
+    opacity: 1; /* Tampilkan dengan opacity */
+    visibility: visible; /* Buat elemen terlihat */
   }
+  
 
   .nav-links li {
     margin: 10px 0; /* Jarak antar item menu */
