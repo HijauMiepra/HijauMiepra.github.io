@@ -24,10 +24,29 @@
 
   <!-- Toggle Menu Hamburger-->
   <script>
-    function toggleMenu() {
-      const navLinks = document.getElementById('nav-links');
-      navLinks.classList.toggle('show'); // Menambah/menghapus kelas 'show'
+function toggleMenu() {
+  const navLinks = document.getElementById('nav-links');
+  if (navLinks.classList.contains('show')) {
+    // Ketika menu ditutup, kita perlu menggunakan transisi yang halus untuk menghilang
+    navLinks.style.maxHeight = navLinks.scrollHeight + 'px'; // Set max-height agar transisi dimulai dari tinggi saat ini
+    setTimeout(() => {
+      navLinks.style.maxHeight = '0'; // Ubah max-height ke 0 untuk transisi menutup
+    }, 10); // Gunakan sedikit delay agar browser menangkap transisi dari nilai sebelumnya
+    navLinks.style.opacity = '0'; // Set opacity ke 0 untuk menghilangkan secara visual
+  } else {
+    // Saat membuka menu
+    navLinks.classList.add('show'); // Tambahkan class "show"
+    navLinks.style.maxHeight = navLinks.scrollHeight + 'px'; // Set max-height berdasarkan tinggi dinamis konten
+    navLinks.style.opacity = '1'; // Set opacity untuk menampilkan menu
+  }
+
+  // Setelah transisi selesai, kita akan menghapus class 'show' saat menu ditutup
+  navLinks.addEventListener('transitionend', function () {
+    if (navLinks.style.maxHeight === '0px') {
+      navLinks.classList.remove('show'); // Hapus class show setelah animasi selesai
     }
+  });
+}
   </script>  
 
   <!-- Hero Section -->
@@ -35,7 +54,10 @@
     <div class="hero-text">
       <h1>Ubah Sampah Menjadi Berkah Bersama HijauMiepra</h1>
       <p>Solusi bank sampah digital yang memudahkan pengelolaan sampah berbasis insentif dan berkelanjutan.</p>
-      <a href="HijauMiepra.apk" class="btn-download" download>Download Aplikasi</a>
+      <a href="HijauMiepra.apk" class="btn-download" download>
+        <img src="https://pngimg.com/d/android_logo_PNG26.png" alt="Android Logo" width="20" style="vertical-align: middle; margin-right: 10px;">
+        Download Sekarang
+      </a>
     </div>
   </section>
 
@@ -44,7 +66,7 @@
     <h2>Fitur HijauMiepra</h2>
     <div class="feature-box">
       <div class="feature-item">
-        <h3>Pengumpulan Sampah Online</h3>
+        <h3>Pengumpulan Sampah Otomatis</h3>
         <p>Pantau pengumpulan sampah rumah tangga dengan mudah.</p>
       </div>
       <div class="feature-item">
@@ -58,7 +80,7 @@
   <footer>
     <p>© 2024 HijauMiepra - Semua Hak Dilindungi.</p>
     <div class="social-media">
-      <a href="https://instagram.com/hijaumiepra">Instagram</a>
+      <a href="https://instagram.com">Instagram</a>
     </div>
   </footer>
 </body>
