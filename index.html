@@ -10,8 +10,11 @@
   <!-- Header -->
   <header>
     <nav>
-      <img src="logo-hijaumiepra.png" alt="Logo HijauMiepra">
-      <ul>
+      <img src="images/logohijaumiepratext.png" alt="Logo HijauMiepra" class="logo">
+      <div class="hamburger" onclick="toggleMenu()">
+        &#9776; <!-- Simbol Hamburger -->
+      </div>
+      <ul id="nav-links" class="nav-links">
         <li><a href="#home">Beranda</a></li>
         <li><a href="#fitur">Fitur</a></li>
         <li><a href="#tentang">Tentang Kami</a></li>
@@ -20,6 +23,14 @@
       </ul>
     </nav>
   </header>
+
+  <!-- Toggle Menu Hamburger-->
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('nav-links');
+      navLinks.classList.toggle('show'); // Menambah/menghapus kelas 'show'
+    }
+  </script>  
 
   <!-- Hero Section -->
   <section id="home" class="hero-section">
@@ -35,12 +46,10 @@
     <h2>Fitur HijauMiepra</h2>
     <div class="feature-box">
       <div class="feature-item">
-        <img src="icon-sampah.png" alt="Pengumpulan Sampah">
         <h3>Pengumpulan Sampah Otomatis</h3>
         <p>Pantau pengumpulan sampah rumah tangga dengan mudah.</p>
       </div>
       <div class="feature-item">
-        <img src="icon-poin.png" alt="Poin dan Hadiah">
         <h3>Dapatkan Poin dan Hadiah</h3>
         <p>Kumpulkan poin dan tukarkan dengan uang tunai.</p>
       </div>
