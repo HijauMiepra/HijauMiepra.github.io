@@ -22,7 +22,9 @@ header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative; /* Tambahkan posisi relatif */
 }
+
 
 header img {
   width: 120px; /* Mengurangi ukuran logo */
@@ -150,6 +152,7 @@ footer p {
   font-size: 28px;
   color: white;
   cursor: pointer;
+  margin-left: 20px; /* Tambahkan jarak kiri */
 }
 
 /* Navigasi */
@@ -159,23 +162,24 @@ footer p {
 
 /* Responsif */
 @media (max-width: 768px) {
-  header nav {
-    flex-direction: column; /* Menampilkan elemen secara vertikal */
-    align-items: flex-start;
-  }
-
-  .hamburger {
-    display: block; /* Tampilkan hamburger menu */
-  }
-
-  .nav-links {
-    display: none; /* Sembunyikan link navigasi secara default */
-    flex-direction: column; /* Menampilkan secara vertikal */
-    width: 100%; /* Memperlebar */
-    background-color: #2c7d28; /* Warna latar belakang menu */
-    position: absolute; /* Menggunakan posisi absolut */
-    top: 60px; /* Posisi di bawah header */
-    left: 0; /* Memperlebar dari kiri */
+  @media (max-width: 768px) {
+    header nav {
+      justify-content: space-between; /* Jarak antara logo dan hamburger */
+    }
+  
+    .hamburger {
+      display: block; /* Tampilkan hamburger menu */
+    }
+  
+    .nav-links {
+      display: none; /* Sembunyikan link navigasi secara default */
+      flex-direction: column; /* Menampilkan secara vertikal */
+      width: 100%; /* Memperlebar */
+      background-color: #2c7d28; /* Warna latar belakang menu */
+      position: absolute; /* Menggunakan posisi absolut */
+      top: 60px; /* Posisi di bawah header */
+      left: 0; /* Memperlebar dari kiri */
+    }
   }
 
   .nav-links li {
@@ -191,7 +195,6 @@ footer p {
   width: 150px; /* Sesuaikan ukuran sesuai kebutuhan */
   border-radius: 15px; /* Ubah nilai ini untuk mengatur tingkat kebulatan */
 }
-
 
 /* Responsive Design */
 @media (max-width: 768px) {
